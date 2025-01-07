@@ -1,4 +1,4 @@
-on: [push]
+on: [ push ]
 
 jobs:
   hello_world_job:
@@ -10,6 +10,6 @@ jobs:
       - name: Hello world action step
         uses: ./
         with:
-          secrets: ${{secrets}}
+          input: ${{ secrets }}
       - name: Show files
         run: cat .env

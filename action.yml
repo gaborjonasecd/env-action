@@ -1,6 +1,6 @@
 name: 'Create .env and .env.test file based on Github Secrets'
 inputs:
-  secrets:
+  input:
     description: "Secrets"
     required: true
 runs:

@@ -4,7 +4,7 @@ const fs = require('fs');
 async function run() {
   const inputPrefix = "CI_";
 
-  const secrets = core.getInput('secrets', { required: true });
+  const secrets = core.getInput('input', { required: true });
   core.info(secrets)
   try {
     let envFileContent = '';
