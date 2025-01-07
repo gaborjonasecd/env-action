@@ -10,6 +10,7 @@ async function run() {
     Object.keys(process.env).forEach(function(key) {
       if(key.startsWith(inputPrefix)) {
         envFileContent += `${key.substring(inputPrefix.length)}=${process.env[key]}\n`;
+        core.info(key.substring(inputPrefix.length))
       }
     });
 
