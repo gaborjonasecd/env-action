@@ -10,6 +10,6 @@ jobs:
       - name: Hello world action step
         uses: ./
         with:
-          input: ${{ secrets.CI_DATABASE_READ_DSN }}
+          input: ${{ secrets }}
       - name: Show files
         run: cat .env
