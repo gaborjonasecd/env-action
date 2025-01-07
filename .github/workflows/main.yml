@@ -9,5 +9,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Hello world action step
         uses: ./
+        with: ${{secrets}}
       - name: Show files
         run: cat .env

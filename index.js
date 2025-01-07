@@ -4,11 +4,13 @@ const fs = require('fs');
 async function run() {
   const inputPrefix = "CI_";
 
+  const secrets = core.getInput('secrets', { required: true });
+  core.info(secrets)
   try {
     let envFileContent = '';
 
     Object.keys(process.env).forEach(function(key) {
-      core.info(key)
+
 
       if(key.startsWith(inputPrefix)) {
         envFileContent += `${key.substring(inputPrefix.length)}=${process.env[key]}\n`;

@@ -1,4 +1,8 @@
 name: 'Create .env and .env.test file based on Github Secrets'
 runs:
+  inputs:
+    secrets:
+      description: "Secrets"
+      required: true
   using: 'node20'
   main: 'index.js'
