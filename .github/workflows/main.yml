@@ -8,6 +8,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
+        uses: ./
       - name: Show files
         run: cat .env
