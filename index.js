@@ -8,7 +8,7 @@ async function run() {
     let envFileContent = '';
 
     Object.keys(process.env).forEach(function(key) {
-      core.info(process.env[key])
+      core.info(key)
 
       if(key.startsWith(inputPrefix)) {
         envFileContent += `${key.substring(inputPrefix.length)}=${process.env[key]}\n`;
